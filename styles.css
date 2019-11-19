@@ -1,0 +1,99 @@
+body {
+  background-color: #222;
+  background-image: linear-gradient(to top, #A91F9F, #CE2F7A);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-height: 100vh;
+  /*min-height: 40em;*/
+  /*justify-content: flex-end;*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+#app {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: #eee;
+}
+
+img#logo {
+  width: 80%;
+  margin-top: 5vh;
+}
+
+button {
+  font-size: 2em;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: transform .1s;
+  transform-origin: center;
+  color: #eee;
+}
+button:active {
+  transform: translateY(1px) scale(.95);
+}
+
+.tracklist {
+  width: 45vw;
+}
+.tracklist > div {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-color: rgba(23, 23, 68, 0.9);
+  border-radius: 2px;
+  margin: 2px;
+}
+.tracklist img {
+  width: 4em;
+}
+
+.crossfader {
+  width: 100%;
+  margin-top: 2em;
+}
+
+i {
+  font-size: 2em !important;
+}
+
+.record {
+  width: 20vw;
+  max-width: 250px;
+  height: 20vw;
+  max-height: 250px;
+  border-radius: 50%;
+  background: #333 repeating-radial-gradient(circle, #333, #333 5px, #555 6px, #555 7px, #333 8px);
+  transform-origin: center;
+  transition: transform 2s ease-in-out;
+  transform: rotate(0deg);
+}
+.record-label {
+  background: #171744;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+.spinning {
+  animation-name: spinning;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes spinning {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
